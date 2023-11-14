@@ -1218,6 +1218,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #777777;
 }
 
+.owl-nav
+{
+  display: none;
+}
+
 .ordered-list-alpha li {
   margin-left: 30px;
   list-style-type: lower-alpha;
@@ -2071,6 +2076,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
   background: none;
   font-size: 24px;
+  z-index: 9999;
   display: none;
   transition: all 0.4s;
   outline: none;
@@ -2084,7 +2090,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 800px) {
   #mobile-nav-toggle {
-    display: inline;
+    display: inline !important;
   }
   #nav-menu-container {
     display: none;
@@ -2412,6 +2418,11 @@ li
   .video-left {
     margin-top: 50px;
   }
+
+  .ul-img
+{
+  grid-template-columns: 1fr !important;
+}
 }
 
 .video-right {
@@ -2420,6 +2431,22 @@ li
   height: 350px;
   border-radius: 10px;
 }
+
+.video-right2 {
+  background: url(../img/255.jpg) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.video-right3 {
+  background: url(../img/apontando-para-o-esboco.jpg) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
+
+
 
 .video-right .overlay-bg {
   border-radius: 10px;
@@ -2434,7 +2461,15 @@ li
   .video-right {
     margin-top: 100px;
   }
+
+
 }
+
+.ul-img img
+{
+  margin-bottom: 0 !important;
+}
+
 
 .menu-area {
   background: url(../img/menu-bg.jpg) center;
@@ -2527,7 +2562,7 @@ li
 }
 
 .single-blog .post-tags li:hover {
-  background-color: #b68834;
+  background-color: red;
 }
 
 .single-blog .post-tags li:hover a {
@@ -2630,7 +2665,7 @@ li
 }
 
 .single-footer-widget .click-btn {
-  background-color: #b68834;
+  background-color: red;
   color: #fff;
   border-radius: 0;
   border-top-left-radius: 0px;
@@ -2685,6 +2720,11 @@ li
 @media (max-width: 991.98px) {
   .single-footer-widget {
     margin-bottom: 30px;
+  }
+
+  .video-left
+  {
+    order:2;
   }
 }
 
