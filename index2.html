@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/elements/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Coffee</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">			
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <style>
+
+            body::-webkit-scrollbar { display: none; }
+            
+            #slide-window
+              {
+              width:100%;
+              height:93vh;
+              overflow:hidden;
+              position: relative;
+              top:0px;
+              left:0px;
+              }
+            
+            #slides
+              {
+              height:100%;  
+              position:absolute;
+              margin:0px;
+              padding:0px;
+              
+              -webkit-transform: translate3d(0px,0px,0px);
+              transform: translate3d(0px,0px,0px);
+                
+              transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+              
+              }
+            
+            .slide 
+              {
+              list-style:none;
+              position: relative;
+              float: left;
+              margin: 0;
+              padding: 0;
+              width: 500px;
+              height: 100%;
+              background: #ccc;
+              text-align: center;
+              line-height: 300px; 
+              background-size: cover; 
+              background-position:50% 50%;
+              color:#fff;
+              -webkit-transform: translate3d(0px,0px,0px);
+              visibility:hidden;
+              -webkit-transform-style: preserve-3d;
+              }
+            
+            .alive { visibility:visible; }
+            
+            .nav 
+              { 
+              position:absolute; 
+              z-index:9; 
+              top:50%; 
+              cursor:pointer; 
+              color:#fff; 
+              opacity:0.7; 
+              transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+              }
+            
+            .nav:hover { opacity:1.0; }
+            #left { left:3%; }
+            #right { right:3%; }
+            
+            
+            #credit 
+              { 
+                display: none !important;
+              }
+            
+            </style>
+                  
+          <header id="header" id="home">
+            
+            <div class="container">
+        
+                <div class="row align-items-center justify-content-between d-flex">
+                  <div class="logo">
+                    <a href="index.html"><img id="logo" style="max-height: 4rem;" src="img/WhatsApp_Image_2018-03-14_at_23.05.14-removebg-preview.png" alt="" title="" /></a>
+                  </div>
+                  <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">Atuar Fachadas</a></li>
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Atuar Impermeabilização</a></li>
+
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="sobrenos.html">Institucional</a></li>
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="servicos.html">Contato</a></li>
+                    
+                          
+                 
+                         
+                        </ul>
+                  </nav><!-- #nav-menu-container -->		    		
+                </div>
+            </div>
+          </header><!-- #header -->	
+<!-- start banner Area -->
+
+
+<div id="slide-window" class="div1">
+
+    <ol id="slides" start="1">
+    
+      <li class="slide color-0 alive" style="background-image:url('img/Ikke-navngivet-1.jpg');"></li>
+      
+      <li class="slide color-1" style="background-image:url('img/Ikke-navngivet-1.jpg');"></li>
+    
+    </ol>
+ 
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
+    
+    <div id="credit">Photography by Trey Ratcliff<br>Slide No.<span id="count">1</span><br><span id="zoom">zoom</span></div>
+    
+</div>
+
+
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$.global = new Object();
+
+$.global.item = 1;
+$.global.total = 0;
+
+$(document).ready(function() 
+    {
+    
+    var WindowWidth = $(window).width();
+    var SlideCount = $('#slides li').length;
+    var SlidesWidth = SlideCount * WindowWidth;
+    
+   $.global.item = 0;
+    $.global.total = SlideCount; 
+    
+    $('.slide').css('width',WindowWidth+'px');
+    $('#slides').css('width',SlidesWidth+'px');
+
+   $("#slides li:nth-child(1)").addClass('alive');
+    
+  $('#left').click(function() { Slide('back'); }); 
+  $('#right').click(function() { Slide('forward'); }); 
+        
+  });
+
+function Slide(direction)
+    {
+   
+    if (direction == 'back') { var $target = $.global.item - 1; }
+    if (direction == 'forward') { var $target = $.global.item + 1; }  
+    
+    if ($target == -1) { DoIt($.global.total-1); } 
+    else if ($target == $.global.total) { DoIt(0); }  
+    else { DoIt($target); }
+    
+    
+    }
+
+function DoIt(target)
+  {
+   
+    var $windowwidth = $(window).width();
+    var $margin = $windowwidth * target; 
+    var $actualtarget = target+1;
+    
+    $("#slides li:nth-child("+$actualtarget+")").addClass('alive');
+    
+    $('#slides').css('transform','translate3d(-'+$margin+'px,0px,0px)');	
+    
+    $.global.item = target; 
+    
+  $('#count').html($.global.item+1);
+    
+  }
+
+    </script>
+
+   <!-- Start review Area -->
+	<section class="review-area section-gap " id="review" style="background:#1FB8FF !important;">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-10">
+					<div class="title text-center">
+						<h2 class="text-light"> ATUAR IMPERMEABILIZAÇÃO</h2>
+			</div>
+			
+		</div>	
+	</section>
+	<!-- End review Area -->
+	<!-- Start video-sec Area -->
+
+				<div class="w-100 text-center d-flex justify-content-center align-items-center flex-column mt-5 mb-5" style="gap:1.5rem !important;">			
+					<h1 style="max-width: 70rem;">Leve a Impermeabilização <br>
+					para seu Condomínio</h1><span style="font-size:1.4rem; max-width: 60rem; color:#000 !important;" class="fw-bold">Atuamos na execução de variados tipos de sistema de imperbealização.
+						<span class="mt-3" style="max-width: 70rem;">Teremos sempre um tipo adequado para solucionar o seu problema!
+						</span>
+		</div>		
+
+
+        <section class="video-sec-area pb-100 pt-40 div2 section" id="about">
+            <div class="container">
+                <div class="row justify-content-start align-items-center">
+                    <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+                        <div class="overlay overlay-bg"></div>
+                        <!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
+                    </div>		
+                    <div class="col-lg-6 video-left">
+                        <h3>Além do teste de estanqueidade com água, indicado em norma, trabalhamos com</h3>
+                        <h1>Eletrostático a Seco</h1><span style="font-size:1.2rem" class="fw-bold">
+                      Esse teste é essencial para uso em locais verticais, a exemplo da rampa, escadas e outros lugares que impossibilita a colocação de água       </span></p>
+                        <button style="background:#1FB8FF; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
+                    </div>
+                    				
+                </div>
+            </div>	
+        </section>
+        <!-- End video-sec Area -->
+           
+
+
+	<section class="video-sec-area pb-100 pt-40 div2 section" id="about">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+		
+				<div class="col-lg-6 video-left">
+					<h3>Principais etapas na aplicação do sistema de imperbealização</h3>
+					<h1>Junta de Movimentação</h1><span style="font-size:1.2rem" class="fw-bold">
+					Trabalhamos com a aplicação de tripla Manta Asfáltica, deixando a impermeabilização bem mais robusta e segura</span></p>
+					<button style="background:#1FB8FF; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
+				</div>
+				<div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+					<div class="overlay overlay-bg"></div>
+					<!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
+				</div>						
+			</div>
+		</div>	
+	</section>
+	<!-- End video-sec Area -->
+	   
+
+
+	<section class="video-sec-area pb-100 pt-40 div2 section" id="about">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+					<div class="overlay overlay-bg"></div>
+					<!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
+				</div>						
+				<div class="col-lg-6 video-left">
+					<h3>Ponto de ancoragem na</h3>
+					<h1>Manta Asfáltica</h1><span style="font-size:1.2rem" class="fw-bold">
+				A área de encontro de piso e parede sofre bastante com as movimentações térmicas nessas áreas, sempre aplicando o reforço com duas camadas de Manta Asfáltica   </span></p>
+					<button style="background:#1FB8FF; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
+				</div>
+				
+			</div>
+		</div>	
+	</section>
+	<!-- End video-sec Area -->
+	   
+	<!-- End banner Area -->
+
+
+<!-- Start blog Area -->
+<section class="blog-area section-gap" id="blog">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="title text-center">
+                    <h3 class="mb-10">Como escolher o impermeabilizante correto para minha obra?</h3>
+                
+                </div>
+            </div>
+        </div>						
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-6 single-blog">
+                <img class="img-fluid" src="img\impermeabilizacao-de-fachada-1.jpg" alt="">
+       
+                <a href="#"><h4 class="mt-2">Mata Asfáltica com Asfalto Aquecido</h4></a>
+                <h5>
+                   A aplicação em grandes áreas, estacionamentos, lajes de piso térreo e grandes edificações e área de resgate. Principalmente
+                quando essas lajeas sentem grandes movimetnações estruturais e térmicas.
+            
+            Não deixa vazios após a aplicação junto ao substrato. Em caso de rompimento ou furo, fica fácil detectar o ponto de origem do vazamento. 
+        Aceita facilmente reparos pontuais a qualquer tempo da sua vida útil.
+    
+    A espessura da Mata asfáltica é somada a espessura do asfalto usado em sua aplicação, deixandoo sistema de imperbealização bem mais robusto e seguro.</h5>
+            
+            </div>
+            <div class="col-lg-6 col-md-6 single-blog">
+                <img class="img-fluid" src="img\file.png" alt="">
+                <a href="#"><h4 class="mt-2">Mata Asfáltica com Maçarico</h4></a>
+                <h5>
+                   A aplicação em pewquenas áreas, a exemplo da área de resgate ou guaritas. O diferencial nesse tipo de aplicação é o banho de asfalto aquecido nos transasses
+                e nos pontos de ancoragem deixando o sistema de imperbealização bem mais seguro</h5>
+                
+            </div>						
+        </div>
+
+
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-6 single-blog">
+                <img class="img-fluid" src="img\impermeabilizacao-de-fachada-1.jpg" alt="">
+       
+                <a href="#"><h4 class="mt-2">Composto Polimérico a Base de Resina Termoplasmática</h4></a>
+                <h5>
+                  Aplicação com pequenas e grandes áreas. Esse sistema de imperbealização tem alta elasticidade, flexibilidade e excelente resistência a tração. 
+                Tem o melhor custo benefício e grande velocidade de recuperação.</h5>
+            
+            </div>
+
+
+        
+        </div>
+    </div>	
+    </div>	
+    
+</section>
+<!-- End blog Area -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/64c7351994cf5d49dc676d65/1h6l2er8b';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- start footer Area -->		
+<div class="footer-area section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>Sobre nós</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    </p>
+                    <p class="footer-text d-none">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>								
+                </div>
+            </div>
+            <div class="col-lg-5  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>Newsletter</h6>
+                    <p>Tire sua dúvida</p>
+                    <div class="" id="mc_embed_signup">
+                        <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                </div>
+
+                            <div class="info pt-20"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>						
+            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                <div class="single-footer-widget">
+                    <h6>Siga-nos</h6>
+                    <p>Não perca nenhuma novidade</p>
+                    <div class="footer-social d-flex align-items-center">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>							
+        </div>
+    </div>
+</div>	
+
+<!-- End footer Area -->	
+<footer class="p-4" style="background: rgb(0, 0, 0);">
+    <h5 class="text-light text-center">@2023 - Todos os Direitos Reservados</h5>
+</footer>
+
+</body>
+</html>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+          <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>	
+        <script src="js/owl.carousel.min.js"></script>			
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>			
+        <script src="js/parallax.min.js"></script>	
+        <script src="js/mail-script.js"></script>				
+        <script src="js/main.js"></script>	
+    </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/elements/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Coffee</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">			
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <style>
+
+            body::-webkit-scrollbar { display: none; }
+            
+            #slide-window
+              {
+              width:100%;
+              height:93vh;
+              overflow:hidden;
+              position: relative;
+              top:0px;
+              left:0px;
+              }
+            
+            #slides
+              {
+              height:100%;  
+              position:absolute;
+              margin:0px;
+              padding:0px;
+              
+              -webkit-transform: translate3d(0px,0px,0px);
+              transform: translate3d(0px,0px,0px);
+                
+              transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+              
+              }
+            
+            .slide 
+              {
+              list-style:none;
+              position: relative;
+              float: left;
+              margin: 0;
+              padding: 0;
+              width: 500px;
+              height: 100%;
+              background: #ccc;
+              text-align: center;
+              line-height: 300px; 
+              background-size: cover; 
+              background-position:50% 50%;
+              color:#fff;
+              -webkit-transform: translate3d(0px,0px,0px);
+              visibility:hidden;
+              -webkit-transform-style: preserve-3d;
+              }
+            
+            .alive { visibility:visible; }
+            
+            .nav 
+              { 
+              position:absolute; 
+              z-index:9; 
+              top:50%; 
+              cursor:pointer; 
+              color:#fff; 
+              opacity:0.7; 
+              transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+              }
+            
+            .nav:hover { opacity:1.0; }
+            #left { left:3%; }
+            #right { right:3%; }
+            
+            
+            #credit 
+              { 
+                display: none !important;
+              }
+            
+            </style>
+                  
+          <header id="header" id="home">
+            
+            <div class="container">
+        
+                <div class="row align-items-center justify-content-between d-flex">
+                  <div class="logo">
+                    <a href="index.html"><img id="logo" style="max-height: 4rem;" src="img/WhatsApp_Image_2018-03-14_at_23.05.14-removebg-preview.png" alt="" title="" /></a>
+                  </div>
+                  <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">Atuar Fachadas</a></li>
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Atuar Impermeabilização</a></li>
+
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="sobrenos.html">Institucional</a></li>
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="servicos.html">Contato</a></li>
+                    
+                          
+                 
+                         
+                        </ul>
+                  </nav><!-- #nav-menu-container -->		    		
+                </div>
+            </div>
+          </header><!-- #header -->	
+<!-- start banner Area -->
+
+
+<div id="slide-window" class="div1">
+
+    <ol id="slides" start="1">
+    
+      <li class="slide color-0 alive" style="background-image:url('img/Ikke-navngivet-1.jpg');"></li>
+      
+      <li class="slide color-1" style="background-image:url('img/Ikke-navngivet-1.jpg');"></li>
+    
+    </ol>
+ 
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
+    
+    <div id="credit">Photography by Trey Ratcliff<br>Slide No.<span id="count">1</span><br><span id="zoom">zoom</span></div>
+    
+</div>
+
+
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$.global = new Object();
+
+$.global.item = 1;
+$.global.total = 0;
+
+$(document).ready(function() 
+    {
+    
+    var WindowWidth = $(window).width();
+    var SlideCount = $('#slides li').length;
+    var SlidesWidth = SlideCount * WindowWidth;
+    
+   $.global.item = 0;
+    $.global.total = SlideCount; 
+    
+    $('.slide').css('width',WindowWidth+'px');
+    $('#slides').css('width',SlidesWidth+'px');
+
+   $("#slides li:nth-child(1)").addClass('alive');
+    
+  $('#left').click(function() { Slide('back'); }); 
+  $('#right').click(function() { Slide('forward'); }); 
+        
+  });
+
+function Slide(direction)
+    {
+   
+    if (direction == 'back') { var $target = $.global.item - 1; }
+    if (direction == 'forward') { var $target = $.global.item + 1; }  
+    
+    if ($target == -1) { DoIt($.global.total-1); } 
+    else if ($target == $.global.total) { DoIt(0); }  
+    else { DoIt($target); }
+    
+    
+    }
+
+function DoIt(target)
+  {
+   
+    var $windowwidth = $(window).width();
+    var $margin = $windowwidth * target; 
+    var $actualtarget = target+1;
+    
+    $("#slides li:nth-child("+$actualtarget+")").addClass('alive');
+    
+    $('#slides').css('transform','translate3d(-'+$margin+'px,0px,0px)');	
+    
+    $.global.item = target; 
+    
+  $('#count').html($.global.item+1);
+    
+  }
+
+    </script>
+
+    
+
+
+
+    <!-- End review Area -->
+<!-- Start video-sec Area -->
+<section class="video-sec-area pb-100 pt-40" id="about">
+    <div class="container">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+                <div class="overlay overlay-bg"></div>
+                <!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
+            </div>						
+            <div class="col-lg-6 video-left">
+                <h1>Quem somos <br>
+            </h1><span style="font-size:1.2rem" class="fw-bold">Atuar Engenharia é uma empresa
+                    A Atuar Fachadas, anteriormente Atuar Engenharia, é uma empresa que iniciou suas operações em Natal em 2018, fundada pelo engenheiro civil Sérgio Costa. Atualmente, é uma das líderes no mercado potiguar em fachadas e impermeabilização, expandindo sua atuação para João Pessoa, Paraíba. Ao longo dos anos, conquistou destaque atendendo diversos condomínios e continua a almejar resultados sólidos em sua trajetória de crescimento.
+                    </span></span></p>
+                <button style="background:red; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
+            </div>
+        </div>
+    </div>	
+</section>
+<!-- End video-sec Area -->
+   
+
+ 	<!-- Start gallery Area -->
+     <section class="gallery-area section-gap" id="gallery">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-60 col-lg-10">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Leve a Atuar para sua fachada e promova:</h1>
+                        <span class="text-body">
+                            <ul class="ul-img mt-3" style="display:grid; grid-template-columns: 1fr 1fr 1fr; justify-items: center; gap:.5rem; ">
+                                <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5>Estética</h5></li>
+                                <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5>Renovação</h5></li>
+                                <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5>Estanqueidade</h5></li>
+                                <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5>Renovação</h5></li>
+                                <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5>Longevidade</h5></li>
+
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>						
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="img\Facade-Cleaning.jpg" class="img-pop-home">
+                        <img class="img-fluid" src="img\Facade-Cleaning.jpg" alt="">
+                    </a>	
+                    <a href="img\Facade-Cleaning-Services-In-Vadodara.jpg" class="img-pop-home">
+                        <img class="img-fluid" src="img\Facade-Cleaning-Services-In-Vadodara.jpg" alt="">
+                    </a>	
+                </div>
+                <div class="col-lg-8">
+                    <a href="img\GettyImages-872522292-1-copy.jpg" class="img-pop-home">
+                        <img class="img-fluid" src="img\GettyImages-872522292-1-copy.jpg" alt="">
+                    </a>	
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="img\trabalhadores-lavando-janelas-no-predio-de-escritorios.jpg" class="img-pop-home">
+                                <img class="img-fluid" src="img\trabalhadores-lavando-janelas-no-predio-de-escritorios.jpg" alt="">
+                            </a>	
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="img\facade.jpg" class="img-pop-home">
+                                <img class="img-fluid" src="img\facade.jpg" alt="">
+                            </a>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </section>
+    <!-- End gallery Area -->
+<!-- Start video-sec Area -->
+<section class="video-sec-area pb-100 pt-40" id="about">
+    <div class="container">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-lg-6 video-right3 justify-content-center align-items-center d-flex">
+                <div class="overlay overlay-bg"></div>
+                <!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
+            </div>						
+            <div class="col-lg-6 video-left">
+                <h6 style="color: red;">O melhor para você</h6>
+                <h1>Campo <br>
+                de Atuação</h1><span style="font-size:1.2rem" class="fw-bold">A Atuar Engenharia vem trabalhando nos serviços de manutenção e execução nos serviços de execuções e inspeções em fachada predial e aplicação de sistemas de hipermeabilização</span></p>
+                <h4 class="mb-1">Qualificação do Eng. Responsável:</h4>
+                <span class="text-body mb-2">
+                    <ul class="ul-img" style="display:grid; grid-template-columns: 1fr 1fr; justify-items: left	; gap:.5rem; ">
+                        <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5 style="font-size:1rem !important; color:#777777;" class="fw-bold">Engenharia Civil</h5></li>
+                        <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5 style="font-size:1rem !important; color:#777777;" class="fw-bold">Engenharia da Segurança do Trabalho</h5></li>
+                        
+                    </ul></span>
+    
+                    <h4 class="mb-1">Especialista em:</h4>
+                    <span class="text-body mb-2">
+                        <ul class="ul-img" style="display:grid; grid-template-columns: 1fr; justify-items: left	; gap:.5rem; ">
+                            <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5 style="font-size:1rem !important; color:#777777;" class="fw-bold">Perícia de patologias das edificações</h5></li>
+                            <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5 style="font-size:1rem !important; color:#777777;" class="fw-bold">Tecnologia da imperbealização</h5></li>
+                            <li class="d-flex align-items-center mb-2" style="gap:.5rem;"><img style=" max-height: 1rem !important; width: auto !important;" src="img\elements\check.png"><h5 style="font-size:1rem !important; color:#777777;" class="fw-bold">Execução e fiscalização de fachadas</h5></li>
+    
+                        </ul></span>
+                <button class="mt-3" style="background:red; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Contactar</button>
+            </div>
+        </div>
+    </div>	
+    </section>
+    <!-- End video-sec Area -->
+    
+    
+        
+<!-- End footer Area -->	
+<footer class="p-4" style="background: rgb(0, 0, 0);">
+    <h5 class="text-light text-center">@2023 - Todos os Direitos Reservados</h5>
+</footer>
+
+</body>
+</html>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+          <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>	
+        <script src="js/owl.carousel.min.js"></script>			
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>			
+        <script src="js/parallax.min.js"></script>	
+        <script src="js/mail-script.js"></script>				
+        <script src="js/main.js"></script>	
+    </body>
+</html>
