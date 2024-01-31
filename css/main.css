@@ -2446,6 +2446,40 @@ li
   border-radius: 10px;
 }
 
+.video-right4 {
+  background: url(../img/apontando-para-o-esboco.jpg) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.video-right5 {
+  background: url(../img/impermeabilizacao-de-lajes.jpg) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.video-right6 {
+  background: url(../img/impermeabilizante.jpg) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.video-right7 {
+  background: url(../img/impermeabilizante-8.webp) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.video-right8 {
+  background: url(../img/blog-Impermeabilizacao-flexivel-ou-rigida.jpg) no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 10px;
+}
 
 
 .video-right .overlay-bg {
