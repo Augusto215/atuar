@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/elements/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>ATUAR IMPERMEABILIZAÇÃO</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">			
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <style>
+
+            body::-webkit-scrollbar { display: none; }
+            
+            #slide-window
+              {
+              width:100%;
+              height:93vh;
+              overflow:hidden;
+              position: relative;
+              top:0px;
+              left:0px;
+              }
+            
+            #slides
+              {
+              height:100%;  
+              position:absolute;
+              margin:0px;
+              padding:0px;
+              
+              -webkit-transform: translate3d(0px,0px,0px);
+              transform: translate3d(0px,0px,0px);
+                
+              transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+              
+              }
+            
+            .slide 
+              {
+              list-style:none;
+              position: relative;
+              float: left;
+              margin: 0;
+              padding: 0;
+              width: 500px;
+              height: 100%;
+              background: #ccc;
+              text-align: center;
+              line-height: 300px; 
+              background-size: cover; 
+              background-position:50% 50%;
+              color:#fff;
+              -webkit-transform: translate3d(0px,0px,0px);
+              visibility:hidden;
+              -webkit-transform-style: preserve-3d;
+              }
+            
+            .alive { visibility:visible; }
+            
+            .nav 
+              { 
+              position:absolute; 
+              z-index:9; 
+              top:50%; 
+              cursor:pointer; 
+              color:#fff; 
+              opacity:0.7; 
+              transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+              }
+            
+            .nav:hover { opacity:1.0; }
+            #left { left:3%; }
+            #right { right:3%; }
+            
+            
+            #credit 
+              { 
+                display: none !important;
+              }
+            
+            </style>
+                  
+          <header id="header" id="home">
+            
+            <div class="container">
+        
+                <div class="row align-items-center justify-content-between d-flex">
+                  <div class="logo">
+                    <a href="index.html"><img id="logo" style="max-height: 4rem;" src="img/WhatsApp_Image_2018-03-14_at_23.05.14-removebg-preview.png" alt="" title="" /></a>
+                  </div>
+                  <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">Atuar Fachadas</a></li>
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Atuar Impermeabilização</a></li>
+
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="institucional.html">Institucional</a></li>
+                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="contato">Contato</a></li>
+                    
+                          
+                 
+                         
+                        </ul>
+                  </nav><!-- #nav-menu-container -->		    		
+                </div>
+            </div>
+          </header><!-- #header -->	
+<!-- start banner Area -->
+
+
+<div id="slide-window" class="div1">
+
+    <ol id="slides" start="1">
+    
+      <li class="slide color-0 alive" style="background-image:url('img/unnamed (1).jpg');"></li>
+      
+      <li class="slide color-1" style="background-image:url('img/Produtos-disponiveis-no-mercado-podem-ser-aplicados-em-duas-demaos-com-intervalo-de-poucas-horas-entre-cada-camada..jpg');"></li>
+    
+    </ol>
+ 
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
+    
+    <div id="credit">Photography by Trey Ratcliff<br>Slide No.<span id="count">1</span><br><span id="zoom">zoom</span></div>
+    
+</div>
+
+
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$.global = new Object();
+
+$.global.item = 1;
+$.global.total = 0;
+
+$(document).ready(function() 
+    {
+    
+    var WindowWidth = $(window).width();
+    var SlideCount = $('#slides li').length;
+    var SlidesWidth = SlideCount * WindowWidth;
+    
+   $.global.item = 0;
+    $.global.total = SlideCount; 
+    
+    $('.slide').css('width',WindowWidth+'px');
+    $('#slides').css('width',SlidesWidth+'px');
+
+   $("#slides li:nth-child(1)").addClass('alive');
+    
+  $('#left').click(function() { Slide('back'); }); 
+  $('#right').click(function() { Slide('forward'); }); 
+        
+  });
+
+function Slide(direction)
+    {
+   
+    if (direction == 'back') { var $target = $.global.item - 1; }
+    if (direction == 'forward') { var $target = $.global.item + 1; }  
+    
+    if ($target == -1) { DoIt($.global.total-1); } 
+    else if ($target == $.global.total) { DoIt(0); }  
+    else { DoIt($target); }
+    
+    
+    }
+
+function DoIt(target)
+  {
+   
+    var $windowwidth = $(window).width();
+    var $margin = $windowwidth * target; 
+    var $actualtarget = target+1;
+    
+    $("#slides li:nth-child("+$actualtarget+")").addClass('alive');
+    
+    $('#slides').css('transform','translate3d(-'+$margin+'px,0px,0px)');	
+    
+    $.global.item = target; 
+    
+  $('#count').html($.global.item+1);
+    
+  }
+
+    </script>
+   <div class="contain">
+
+    <div class="wrapper">
+  
+      <div class="form">
+        <h4>INICIE JÁ</h4>
+        <h2 class="form-headline">Mande uma mensagem</h2>
+        <form id="submit-form" action="">
+          <p>
+            <input id="name" class="form-input" type="text" placeholder="Seu nome*">
+            <small class="name-error"></small>
+          </p>
+          <p>
+            <input id="email" class="form-input" type="email" placeholder="Seu email*">
+            <small class="name-error"></small>
+          </p>
+          <p class="full-width">
+            <input id="company-name" class="form-input" type="text" placeholder="Nome da empresa*" required>
+            <small></small>
+          </p>
+          <p class="full-width">
+            <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Sua mensagem*" required></textarea>
+            <small></small>
+          </p>
+          <p class="full-width d-none">
+            <input class="d-none" type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+          </p>
+          <p class="full-width">
+            <input type="submit" class="submit-btn" value="Enviar" onclick="checkValidations()">
+          </p>
+        </form>
+      </div>
+  
+      <div class="contacts contact-wrapper">
+  
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit <span class="highlight-text-grey"></span> Cras ultricies interdum neque id ornare?</li>
+          <span class="hightlight-contact-info">
+            <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> info@demo.com</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+91 11 1111 2900</span></li>
+          </span>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+
+.contain {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+
+.contact-wrapper {
+  margin: auto 0;
+}
+
+.submit-btn {
+  float: left;
+}
+.reset-btn {
+  float: right;
+}
+
+.form-headline:after {
+  content: "";
+  display: block;
+  width: 10%;
+  padding-top: 10px;
+  border-bottom: 3px solid #ec1c24;
+}
+
+.highlight-text {
+  color: #ec1c24;
+}
+
+.hightlight-contact-info {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.highlight-text-grey {
+  font-weight: 500;
+}
+
+.email-info {
+    margin-top: 20px;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  font-family: 'Roboto', sans-serif;
+}
+
+.required-input {
+  color: black;
+}
+@media (min-width: 600px) {
+  .contain {
+    padding: 0;
+  }
+}
+
+h3,
+ul {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+.form-input:focus,
+textarea:focus{
+  outline: 1.5px solid #ec1c24;
+}
+
+.form-input,
+textarea {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.wrapper > * {
+  padding: 1em;
+}
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .wrapper > * {
+    padding: 2em 2em;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts {
+  color: #212d31;
+}
+
+.form {
+  background: #fff;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+form label {
+  display: block;
+}
+form p {
+  margin: 0;
+}
+
+.full-width {
+  grid-column: 1 / 3;
+}
+
+button,
+.submit-btn,
+.form-input,
+textarea {
+  padding: 1em;
+}
+
+button, .submit-btn {
+  background: transparent;
+  border: 1px solid #ec1c24;
+  color: #ec1c24;
+  border-radius: 15px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+button:hover, .submit-btn:hover,
+button:focus , .submit-btn:focus{
+  background: #ec1c24;
+  outline: 0;
+  color: #eee;
+}
+.error {
+  color: #ec1c24;
+}
+  </style>
+<!-- End blog Area -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/64c7351994cf5d49dc676d65/1h6l2er8b';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- start footer Area -->		
+<div class="footer-area section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>Sobre nós</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    </p>
+                    <p class="footer-text d-none">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>								
+                </div>
+            </div>
+            <div class="col-lg-5  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>Newsletter</h6>
+                    <p>Tire sua dúvida</p>
+                    <div class="" id="mc_embed_signup">
+                        <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                </div>
+
+                            <div class="info pt-20"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>						
+            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                <div class="single-footer-widget">
+                    <h6>Siga-nos</h6>
+                    <p>Não perca nenhuma novidade</p>
+                    <div class="footer-social d-flex align-items-center">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>							
+        </div>
+    </div>
+</div>	
+
+<!-- End footer Area -->	
+<footer class="p-4" style="background: rgb(0, 0, 0);">
+    <h5 class="text-light text-center">@2023 - Todos os Direitos Reservados</h5>
+</footer>
+
+</body>
+</html>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+          <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>	
+        <script src="js/owl.carousel.min.js"></script>			
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>			
+        <script src="js/parallax.min.js"></script>	
+        <script src="js/mail-script.js"></script>				
+        <script src="js/main.js"></script>	
+    </body>
+</html>
