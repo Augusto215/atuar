@@ -12,7 +12,8 @@
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
 		<!-- meta character set -->
-		
+		<link href="https://fonts.cdnfonts.com/css/switzer" rel="stylesheet">
+
 		<meta charset="UTF-8">
 		<!-- Site Title -->
 		<title>ATUAR FACHADAS</title>
@@ -29,9 +30,55 @@
 			<link rel="stylesheet" href="css/bootstrap.css">
 			<link rel="stylesheet" href="css/main.css">
 		</head>
+
 		<body>
+			<div class="container">
+			  </div>
+			  
 			<style>
 
+.dynamic-text {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+/* Animações */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+}
+				
+
+				body
+				{
+					background: black;
+				}
 				body::-webkit-scrollbar { display: none; }
 				
 				#slide-window
@@ -103,7 +150,7 @@
 				
 				</style>
 					  
-			  <header id="header" id="home">
+			  <header id="header" id="home" style="position: static; background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('img/unnamed (2).jpg') !important;">
 				
 			    <div class="container">
 			
@@ -128,27 +175,93 @@
 			    </div>
 			  </header><!-- #header -->	
 	<!-- start banner Area -->
+	<div class="hero-container">
+		<div class="video-background" style="width:100%; height: 100vh;clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 66%, 0% 75%, 0 0);">
+		  <div class="video-gradient"></div>
+		  <div class="centered-text w-100 container" style="color:#fff; font-size: 3rem; line-height: 1; font-weight: 800; -webkit-text-stroke-color:rgb(17, 17, 17); -webkit-text-stroke-width:1.3px">SUA FACHADA <span class="dynamic-text" style="color:rgb(235, 0, 0)">RENOVADA</span>
+		  </div> <!-- Adicionado -->
+		  <video autoplay loop muted style="width:100%; height:100%; object-fit: cover;">
+			<source src="img/20230816_155925.mp4" type="video/mp4">
+			Seu navegador não suporta vídeos.
+		  </video>
+		</div>
+	  </div>
+	  <div class="container pb-5 d-flex flex-column align-items-center" style="margin-top:-10rem">
+		<h2 class="mb-3" style="color: #fff;">ATUAR ENGENHARIA</h2>
+	  <span class="text-center pb-4 " style="font-size:1.4rem; max-width: 50rem; color:#fff;">A empresa Atuar Engenharia, através dos anos de dedicação ao setor de Manutenção predial e intensa dedicação na conquista na prestação de serviço de qualidade, passou a se destacar fortemente no mercado de Manutenção de Fachada predial e Impermeabilização de lajes. Após firmar dezenas de compromissos, vem colhendo a satisfação de sua clientela. 
 
-
-	<div id="slide-window" class="div1">
-  
-		<ol id="slides" start="1">
-		
-		  <li class="slide color-0 alive" style="background-image:url('img/Ikke-navngivet-1.jpg');"></li>
-		  
-		  <li class="slide color-1" style="background-image:url('img/limpeza-fachada.jpg');"></li>
-		
-		</ol>
-	 
-		<span class="nav fa fa-chevron-left fa-3x" id="left"></span>
-		<span class="nav fa fa-chevron-right fa-3x" id="right"></span>
-		
-		<div id="credit">Photography by Trey Ratcliff<br>Slide No.<span id="count">1</span><br><span id="zoom">zoom</span></div>
-		
 	</div>
+	<style>
+		.centered-text {
+  position: absolute;
+  z-index: 3; /* Garante que o texto fique sobre o vídeo e o gradiente */
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o texto */
+  color: #FFFFFF; /* Ajuste a cor conforme necessário */
+  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+  text-align: center;
+}
+	 .video-background {
+		position: relative;
+		width: 100%;
+		height: 100vh; /* Ajuste a altura conforme necessário */
+		overflow: hidden;
+	}
+	
+	.video-background iframe, .video-background video, .video-gradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.video-gradient {
+		z-index: 1; /* Garante que o gradiente fique sobre o vídeo */
+		background:linear-gradient(rgba(8, 41, 94, 0.199), rgba(0, 0, 0, 0.198))
+	}
+	</style>
 	
 	
+		  </div>
+		</div>
+
+
 	
+	
+	<script>
+		const texts = ['RENOVADA', 'SEGURA', 'MODERNIZADA'];
+let currentIndex = 0;
+
+const dynamicText = document.querySelector('.dynamic-text');
+
+function updateText() {
+  // Aplica a animação de slide-out
+  dynamicText.classList.add('slide-out');
+
+  // Aguarda a animação de slide-out terminar
+  setTimeout(() => {
+    // Atualiza o índice para o próximo texto
+    currentIndex = (currentIndex + 1) % texts.length;
+
+    // Atualiza o texto
+    dynamicText.textContent = texts[currentIndex];
+
+    // Remove a classe de slide-out e adiciona slide-in
+    dynamicText.classList.remove('slide-out');
+    dynamicText.classList.add('slide-in');
+
+    // Aguarda a animação de slide-in terminar antes de iniciar o próximo ciclo
+    setTimeout(() => {
+      dynamicText.classList.remove('slide-in');
+    }, 500); // Este tempo deve corresponder à duração da animação slide-in
+  }, 500); // Este tempo deve corresponder à duração da animação slide-out
+}
+
+// Atualiza o texto a cada 3 segundos
+setInterval(updateText, 3000);
+	</script>
 
 	
 	  
@@ -212,24 +325,13 @@
 		</script>
 
 		
-		<!-- Start review Area -->
-		<section class="review-area section-gap" id="review">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content pb-60 col-lg-10">
-						<div class="title text-center">
-							<h2 class="text-light"> ATUAR FACHADAS</h2>
-				</div>
-				
-			</div>	
-		</section>
-
+	
 
 	
 
 		<!-- End review Area -->
 	<!-- Start video-sec Area -->
-	<section class="video-sec-area pb-100 pt-40" id="about">
+	<section class=" video-sec-area pb-100 pt-40" style="background: #fff;" id="about">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
@@ -255,9 +357,9 @@
 				<div class="row justify-content-start align-items-center">
 									
 					<div class="col-lg-6 video-left">
-						<h6 style="color: red;">A EficiÊncia nos Move</h6>
-						<h1>Revestimento <br>
-						Cerâmico</h1><span style="font-size:1.2rem" class="fw-bold">Trabalhamos com rejunte que tem em sua composição o cimento Portland, agregados minerais siliconados, hidrofugante, polímeros e antimofo.</span></span></p>
+						<h6 style="color: red;">A Eficiência nos Move</h6>
+						<h1 style="color: #fff;">Revestimento <br>
+						Cerâmico</h1><span style="font-size:1.2rem; color:#fff;" class="fw-bold">Trabalhamos com rejunte que tem em sua composição o cimento Portland, agregados minerais siliconados, hidrofugante, polímeros e antimofo.</span></span></p>
 						<button style="background:red; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Contrate</button>
 					</div>
 					<div class="col-lg-6 video-right2 justify-content-center align-items-center d-flex">
@@ -271,7 +373,7 @@
 
 
 	<!-- Start blog Area -->
-	<section class="blog-area section-gap" id="blog">
+	<section class="blog-area section-gap" id="blog" style="background: #fff;">
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="menu-content pb-60 col-lg-10">
