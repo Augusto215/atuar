@@ -764,6 +764,11 @@ td, th {
   .no-flex-xs {
     display: block !important;
   }
+
+  .div-desk
+  {
+    display: none !important;
+  }
 }
 
 .row.no-margin {
@@ -2069,10 +2074,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
-  position: fixed;
+  position: absolute;
   right: 15px;
   z-index: 999;
-  top: 32px;
+  top: 30px;
   border: 0;
   background: none;
   font-size: 24px;
@@ -2081,6 +2086,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
+  padding: .5rem;
 }
 
 #mobile-nav-toggle i {
@@ -2182,6 +2188,7 @@ body.mobile-nav-active {
 
 body.mobile-nav-active #mobile-nav {
   left: 0;
+  padding: .5rem;
 }
 
 body.mobile-nav-active #mobile-nav-toggle {
