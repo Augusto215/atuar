@@ -33,6 +33,10 @@
     <body>
         <style>
 
+            body
+            {
+                background: #F2F2F2;
+            }
             body::-webkit-scrollbar { display: none; }
             
             #slide-window
@@ -58,7 +62,10 @@
               transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
               
               }
-            
+              span
+              {
+                font-weight: 600;
+              }
             .slide 
               {
               list-style:none;
@@ -121,11 +128,43 @@
                     <nav id="nav-menu-container">
                       <ul class="nav-menu d-flex align-items-center">
                           <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">A empresa</a></li>
-                          <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Serviços</a></li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle fw-bold pr-0" style="list-style: none !important; font-size:1rem !important;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Serviços							  </a>
+                                <style>
+                                  li
+                                  {
+                                      list-style: none;
+                                  }
+                                  #navbarDropdownMenuLink::after {
+  display: none;
   
+}
+  .dropdown-item:active
+  {
+      background: #fff;
+  }
+
+  .dropdown-item:hover
+  {
+      color: red !important;
+  }
+                                </style>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/fibra-de-vidro.html">Instalação de caixa de fibra de vidro
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/trabalho-altura.html">Trabalho em altura
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/estruturas.html">Recuperação de Estruturas
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/impermeabilização.html">Impermeabilização
+                              </a></li>
+
+                              </ul>
+                            </li>
                           <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="institucional.html">Eng. Téc. Resp</a></li>
                           <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="contato.html">Contato</a></li>
-                          <li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="contato.html">Solicitar uma visita técnica	</a></li>
+                          <li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="https://api.whatsapp.com/send?phone=558496261696d">Solicitar uma visita técnica	</a></li>
 
                       
                             
@@ -136,10 +175,36 @@
                   </div>
               </div>
             </header><!-- #header -->	
+            <script>
+                window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
+            </script>
+            <style>
+                li
+                {
+                    list-style: none;
+                }
+                #navbarDropdownMenuLink::after {
+display: none;
+
+}
+.dropdown-item:active
+{
+background: #fff;
+}
+
+.dropdown-item:hover
+{
+color: red !important;
+}
+              </style>
 <!-- start banner Area -->
 
-<div class="fluid-container" style="background: linear-gradient(rgba(0, 0, 0, 0.152), rgba(255, 0, 0, 0.224)), url('img/20210611_100725.jpg'); background-size:cover; height:20rem; width:100%; background-position: center;">
-
+<div class="fluid-container d-flex justify-content-center align-items-center" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.378), rgba(83, 1, 1, 0.358)), url('img/20210611_100725.jpg'); background-size:cover; height:20rem; width:100%; background-position: center;">
+    <span class="text-center container" style="color: #fff; font-size: 2.3rem; -webkit-text-stroke-color:rgb(17, 17, 17); -webkit-text-stroke-width:1.3px; text-transform: uppercase; line-height: 1.1; font-weight: 800;">Instalação de Caixa de Fibra de Vidro</span>
     </div>
  
     <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
@@ -217,125 +282,46 @@ function DoIt(target)
 	<!-- End review Area -->
 	<!-- Start video-sec Area -->
 
-				<div class="w-100 text-center d-flex justify-content-center align-items-center flex-column mt-5 mb-5" style="gap:1.5rem !important;">			
-					<h1 style="max-width: 70rem;">Leve a Impermeabilização <br>
-					para seu Condomínio</h1><span style="font-size:1.4rem; max-width: 60rem; color:#000 !important;" class="fw-bold">Atuamos na execução de variados tipos de sistema de imperbealização.
-						<span class="mt-3" style="max-width: 70rem;">Teremos sempre um tipo adequado para solucionar o seu problema!
-						</span>
-		</div>		
+                    <div class="container mb-5">
+                    <div class="d-flex align-items-center mt-5" style="gap: 2rem;">
+                        <span class="text-center" style="width: 30%; color:#000; font-size: 1.1rem;">
+                            A instalação de caixa de fibra de vidro substitui caixas de concreto deterioradas, oferecendo leveza, durabilidade e resistência à corrosão. Ideal para sistemas de drenagem e refrigeração, melhora a segurança e estética de edificações.
+                        </span>
 
 
-        <section class="video-sec-area pb-100 pt-40 div2 section" id="about">
-            <div class="container">
-                <div class="row justify-content-start align-items-center">
-                    <div class="col-lg-6 video-right5 justify-content-center align-items-center d-flex">
-                        <div class="overlay overlay-bg"></div>
-                        <!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
-                    </div>		
-                    <div class="col-lg-6 video-left">
-                        <h3>Além do teste de estanqueidade com água, indicado em norma, trabalhamos com</h3>
-                        <h1>Eletrostático a Seco</h1><span style="font-size:1.2rem" class="fw-bold">
-                      Esse teste é essencial para uso em locais verticais, a exemplo da rampa, escadas e outros lugares que impossibilita a colocação de água       </span></p>
-                        <button style="background:#1FB8FF; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
+
+
+
+                            <div  style=" width: 70%; border-radius:8px;">
+                       <div class="d-flex align-items-center" style="background: #fff; height:15rem; border-radius:8px;">
+                            <img style="min-width: 50%; height:100%; object-fit: cover; border-radius: 8px 0 0 0;" src="img\20230707_092512.jpg">
+                            <span class="p-3" style="color: #000; font-size: 1rem; text-align: center;">
+                                A avaliação inicial detecta a deterioração das caixas de concreto, evidenciando riscos à segurança e à estrutura, motivando a substituição por materiais mais duráveis como fibra de vidro ou alumínio.                            </span>
+                       </div>
+                       <div class="d-flex align-items-center" style="background: #fff; height:15rem; border-radius:4px;">
+                        <span class="p-3" style="color: #000; font-size: 1rem; text-align: center;">
+                            Selecionamos materiais de alta qualidade, como aço inox 304 e Selante PU 30, para a instalação da nova caixa e sistema de drenagem, visando durabilidade e eficiência.                       </span>
+                        <img style="min-width: 50%; height:100%; object-fit: cover;" src="img\20230707_100223.jpg">
+
+                   </div>
+                   <div class="d-flex align-items-center" style="background: #fff; height:15rem; border-radius:4px;">
+                    <img style="min-width: 50%; height: 100%; object-fit: cover; border-radius: 0 0 0 8px" src="img\20230707_094555.jpg">
+
+                    <span class="p-3" style="color: #000; font-size: 1rem; text-align: center;">
+                        A substituição traz benefícios como redução de peso sobre a edificação, melhoria estética, prevenção de infiltrações e facilitação de futuras instalações.                   </span>
+
+               </div>   
+               
                     </div>
-                    				
+                    			
                 </div>
+                </div>
+            </div>
             </div>	
         </section>
         <!-- End video-sec Area -->
            
 
-
-	<section class="video-sec-area pb-100 pt-40 div2 section" id="about">
-		<div class="container">
-			<div class="row justify-content-start align-items-center">
-		
-				<div class="col-lg-6 video-left">
-					<h3>Principais etapas na aplicação do sistema de imperbealização</h3>
-					<h1>Junta de Movimentação</h1><span style="font-size:1.2rem" class="fw-bold">
-					Trabalhamos com a aplicação de tripla Manta Asfáltica, deixando a impermeabilização bem mais robusta e segura</span></p>
-					<button style="background:#1FB8FF; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
-				</div>
-				<div class="col-lg-6 video-right6 justify-content-center align-items-center d-flex">
-					<div class="overlay overlay-bg"></div>
-					<!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
-				</div>						
-			</div>
-		</div>	
-	</section>
-	<!-- End video-sec Area -->
-	   
-
-
-	<section class="video-sec-area pb-100 pt-40 div2 section" id="about">
-		<div class="container">
-			<div class="row justify-content-start align-items-center">
-				<div class="col-lg-6 video-right7 justify-content-center align-items-center d-flex">
-					<div class="overlay overlay-bg"></div>
-					<!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-icon.png" alt=""></a> -->
-				</div>						
-				<div class="col-lg-6 video-left">
-					<h3>Ponto de ancoragem na</h3>
-					<h1>Manta Asfáltica</h1><span style="font-size:1.2rem" class="fw-bold">
-				A área de encontro de piso e parede sofre bastante com as movimentações térmicas nessas áreas, sempre aplicando o reforço com duas camadas de Manta Asfáltica   </span></p>
-					<button style="background:#1FB8FF; border:none; outline:none; color:#fff; border-radius:4px; padding:.5rem 2rem; font-size:1.2rem;">Falar Agora</button>
-				</div>
-				
-			</div>
-		</div>	
-	</section>
-	<!-- End video-sec Area -->
-	   
-	<!-- End banner Area -->
-
-
-<!-- Start blog Area -->
-<section class="blog-area section-gap" id="blog">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-60 col-lg-10">
-                <div class="title text-center">
-                    <h3 class="mb-10">Como escolher o impermeabilizante correto para minha obra?</h3>
-                
-                </div>
-            </div>
-        </div>						
-        <div class="row mb-5">
-            <div class="col-lg-6 col-md-6 single-blog">
-                <img class="img-fluid" src="img\impermeabilizacao-manta-asfaltica-24012022_Olho$$0.jpg" alt="">
-       
-                <a href="#"><h4 class="mt-2">Mata Asfáltica com Asfalto Aquecido</h4></a>
-                <h5>
-                   A aplicação em grandes áreas, estacionamentos, lajes de piso térreo e grandes edificações e área de resgate. Principalmente
-                quando essas lajeas sentem grandes movimetnações estruturais e térmicas.
-            
-            Não deixa vazios após a aplicação junto ao substrato. Em caso de rompimento ou furo, fica fácil detectar o ponto de origem do vazamento. 
-        Aceita facilmente reparos pontuais a qualquer tempo da sua vida útil.
-    
-    A espessura da Mata asfáltica é somada a espessura do asfalto usado em sua aplicação, deixandoo sistema de imperbealização bem mais robusto e seguro.</h5>
-            
-            </div>
-            <div class="col-lg-6 col-md-6 single-blog">
-                <img class="img-fluid" src="img\manta-asfaltica_Olho$$0.webp" alt="">
-                <a href="#"><h4 class="mt-2">Mata Asfáltica com Maçarico</h4></a>
-                <h5>
-                   A aplicação em pewquenas áreas, a exemplo da área de resgate ou guaritas. O diferencial nesse tipo de aplicação é o banho de asfalto aquecido nos transasses
-                e nos pontos de ancoragem deixando o sistema de imperbealização bem mais seguro</h5>
-                
-            </div>						
-        </div>
-
-
-        <div class="row mb-5">
-            <div class="col-lg-6 col-md-6 single-blog">
-                <img class="img-fluid" src="img\impermeabilizacao-de-fachada-1.jpg" alt="">
-       
-                <a href="#"><h4 class="mt-2">Composto Polimérico a Base de Resina Termoplasmática</h4></a>
-                <h5>
-                  Aplicação com pequenas e grandes áreas. Esse sistema de imperbealização tem alta elasticidade, flexibilidade e excelente resistência a tração. 
-                Tem o melhor custo benefício e grande velocidade de recuperação.</h5>
-            
-            </div>
 
 
         

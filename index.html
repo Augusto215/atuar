@@ -168,11 +168,43 @@
 				      <nav id="nav-menu-container">
 						<ul class="nav-menu d-flex align-items-center">
 							<li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">A empresa</a></li>
-							<li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Serviços</a></li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle fw-bold pr-0" style="list-style: none !important; font-size:1rem !important;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Serviços							  </a>
+								  <style>
+									li
+									{
+										list-style: none;
+									}
+									#navbarDropdownMenuLink::after {
+    display: none;
 	
+}
+	.dropdown-item:active
+	{
+		background: #fff;
+	}
+
+	.dropdown-item:hover
+	{
+		color: red !important;
+	}
+								  </style>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								  <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/fibra-de-vidro.html">Instalação de caixa de fibra de vidro
+								</a></li>
+								  <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/trabalho-altura.html">Trabalho em altura
+								</a></li>
+								  <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/estruturas.html">Recuperação de Estruturas
+								</a></li>
+								  <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/impermeabilização.html">Impermeabilização
+								</a></li>
+
+								</ul>
+							  </li>
 							<li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="institucional.html">Eng. Téc. Resp</a></li>
 							<li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="contato.html">Contato</a></li>
-							<li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="contato.html">Solicitar uma visita técnica	</a></li>
+							<li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="https://api.whatsapp.com/send?phone=558496261696d">Solicitar uma visita técnica	</a></li>
 
 						
 							  
@@ -200,7 +232,7 @@
 		</h2>
 	  <span class="text-center pb-4 " style="font-size:1.4rem; max-width: 50rem; color:#fff;">A empresa Atuar Engenharia, através dos anos de dedicação ao setor de Manutenção predial e intensa dedicação na conquista na prestação de serviço de qualidade, passou a se destacar fortemente no mercado de Manutenção de Fachada predial e Impermeabilização de lajes. Após firmar dezenas de compromissos, vem colhendo a satisfação de sua clientela. 
 	  </span>
-	  <a href="" style="color:#fff; font-size:1.3rem; border-radius:4px; padding:.7rem 2rem; background: red;">Saiba mais</a>
+	  <a href="https://api.whatsapp.com/send?phone=558496261696" style="color:#fff; font-size:1.3rem; border-radius:4px; padding:.7rem 2rem; background: red;">Saiba mais</a>
 
 	</div>
 	<style>
@@ -367,7 +399,19 @@ setInterval(updateText, 3000);
 			{
 				display: none;
 			}
-
+			.flex-mobile
+			{	margin-bottom:.5rem;
+				flex-direction: column !important;
+				gap: 1rem;
+			}
+			.flex-mobile a 
+			{
+				width: 100% !important;
+			}
+			.blog-item
+			{
+				width: 100% !important;
+			}
 			}
 			
 		</style>
@@ -376,6 +420,7 @@ setInterval(updateText, 3000);
 	
 	<!-- End video-sec Area -->
 	<style>
+
 		.a-container:hover
 		{
 			background:rgb(197, 12, 12) !important;
@@ -443,7 +488,7 @@ setInterval(updateText, 3000);
 		<h2 class="mb-3 text-center" style="color: #000000;">BLOG
 		</h2>						
 		<div class="blog-container container">
-			<div class="d-flex justify-content-start  align-items-center w-100" style="gap: .5rem; height: 12rem;">
+			<div class="d-flex justify-content-start  align-items-center w-100 flex-mobile" style="gap: .5rem; height: 12rem;">
 			<a style="width: 40%; height: 100%;" href=""><div class="blog-item revitalizacao d-flex align-items-center justify-content-center p-4" style="width:100%;height:100%; background:linear-gradient(rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.1)), url('img/20201217_150353.jpg'); background-position:center; background-size: cover;">
 			  <h3 style="color: #fff; -webkit-text-stroke-color:rgb(17, 17, 17);font-size:1.7rem !important; text-align: center; -webkit-text-stroke-width:1px">RESPONSABILIDADES DO SÍNDICO
 			</h3>
@@ -456,7 +501,7 @@ setInterval(updateText, 3000);
 			</a>
 		</div>
 			
-		<div class="d-flex  justify-content-start  align-items-center w-100" style=" gap: .5rem; height: 12rem;">
+		<div class="d-flex  justify-content-start  align-items-center w-100 flex-mobile" style=" gap: .5rem; height: 12rem;">
 		<a href="" style="width: 70%; height: 100%;">
 		<div class="blog-item d-flex align-items-center justify-content-center impermeabilizacao p-4" style="width:100%; height:100%; background:linear-gradient(rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.1)), url('img/20210126_150806.jpg'); background-position:center; background-size: cover;">
 			<h3 style="color: #fff; -webkit-text-stroke-color:rgb(17, 17, 17);font-size:1.7rem !important; text-align: center; -webkit-text-stroke-width:1px" class="text-center">INSPEÇÃO PREDIAL
@@ -509,10 +554,16 @@ setInterval(updateText, 3000);
 }
 	  </style>
 	<!-- start footer Area -->		
-	
+	<div class="fluid-container" style="background: #000000; ">
+	<div class="container mt-5">
+		<h2 class="text-center mb-4" style="color: #fff;">Siga nosso Instagram!</h2>
+		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div style="border-radius:12px;" class="elfsight-app-5e172032-5f9a-42e2-a45e-31b62255eecb" data-elfsight-app-lazy></div>
+	</div>
+</div>
 	<!-- End footer Area -->	
-	<footer class="p-4" style="background: rgb(0, 0, 0);">
-		<h5 class="text-light text-center" style="font-size: 1rem;">Atuar Engenharia, 2024 - Todos os Direitos Reservados</h5>
+	<footer class="p-4" style="background: rgb(255, 255, 255);">
+		<h5 class="text-light text-center" style="font-size: 1rem; color:#000 !important">Atuar Engenharia, 2024 - Todos os Direitos Reservados</h5>
 	</footer>
 	<div id="loading-screen" style="background: black;" class="loading-screen">
 		<!-- Você pode incluir uma imagem ou até mesmo um GIF aqui -->
