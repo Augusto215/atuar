@@ -128,11 +128,43 @@
                     <nav id="nav-menu-container">
                       <ul class="nav-menu d-flex align-items-center">
                           <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">A empresa</a></li>
-                          <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Serviços</a></li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle fw-bold pr-0" style="list-style: none !important; font-size:1rem !important;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Serviços							  </a>
+                                <style>
+                                  li
+                                  {
+                                      list-style: none;
+                                  }
+                                  #navbarDropdownMenuLink::after {
+  display: none;
   
+}
+  .dropdown-item:active
+  {
+      background: #fff;
+  }
+
+  .dropdown-item:hover
+  {
+      color: red !important;
+  }
+                                </style>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/fibra-de-vidro.html">Instalação de caixa de fibra de vidro
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/trabalho-altura.html">Trabalho em altura
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/estruturas.html">Recuperação de Estruturas
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/impermeabilização.html">Impermeabilização
+                              </a></li>
+
+                              </ul>
+                            </li>
                           <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="institucional.html">Eng. Téc. Resp</a></li>
                           <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="contato.html">Contato</a></li>
-                          <li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="contato.html">Solicitar uma visita técnica	</a></li>
+                          <li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="https://api.whatsapp.com/send?phone=558496261696d">Solicitar uma visita técnica	</a></li>
 
                       
                             
@@ -143,10 +175,9 @@
                   </div>
               </div>
             </header><!-- #header -->	
-<!-- start banner Area -->
 
 <div class="fluid-container d-flex justify-content-center align-items-center" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.378), rgba(83, 1, 1, 0.358)), url('img/20210611_100725.jpg'); background-size:cover; height:20rem; width:100%; background-position: center;">
-    <span class="text-center" style="color: #fff; font-size: 2.3rem; -webkit-text-stroke-color:rgb(17, 17, 17); -webkit-text-stroke-width:1.3px; text-transform: uppercase; font-weight: 800;">Instalação de Caixa de Fibra de Vidro</span>
+    <span class="text-center container" style="color: #fff; font-size: 2.3rem; -webkit-text-stroke-color:rgb(17, 17, 17); -webkit-text-stroke-width:1.3px; text-transform: uppercase; font-weight: 800; line-height: 1.1;">Recuperação Estrutural</span>
     </div>
  
     <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
@@ -219,38 +250,72 @@ function DoIt(target)
   }
 
     </script>
+    <style>
+         @media(max-width:768px)
+              {
+                .span1
+                {
+                  display: none !important;
 
+                }
+                .span2
+                {
+                  width: 100% !important;
+                }
+
+                  .flex2 span
+                {
+                  order: 2;
+                }
+                .flex-span
+                {
+                  flex-direction: column !important;
+                  height: auto !important;
+                }
+                .flex-span img
+                {
+                  height: 15rem !important;
+                  width: 100% !important;
+                  border-radius: 0 !important;
+                }
+              }
+              #left, #right
+              {
+                display: none;
+              }
+    </style>
 
 	<!-- End review Area -->
 	<!-- Start video-sec Area -->
 
                     <div class="container mb-5">
                     <div class="d-flex align-items-center mt-5" style="gap: 2rem;">
-                        <span class="text-center" style="width: 30%; color:#000; font-size: 1.1rem;">
-                            A instalação de caixa de fibra de vidro substitui caixas de concreto deterioradas, oferecendo leveza, durabilidade e resistência à corrosão. Ideal para sistemas de drenagem e refrigeração, melhora a segurança e estética de edificações.
-                        </span>
+                        <span class="span1 text-center d-flex flex-column align-item-scenter" style="width: 30%; ">
+                            <span class="mb-3" style="color:#000; font-size: 1.1rem;">A recuperação de estruturas é uma etapa crucial para manter a integridade e a segurança de construções. Essencialmente, envolve a identificação e correção de problemas como fissuras, corrosão e desgastes causados pelo tempo ou falhas na execução. Utilizando materiais adequados e contando com equipes experientes, busca-se restaurar as condições originais das estruturas, prolongando sua vida útil e garantindo a segurança dos usuários.</span> 
+                 
+                        <a href="" style="border-radius:4px; padding: .7rem 1.5rem; background: red; color: #fff;">Faça um orçamento</a>
+
+                    </span>
 
 
 
-
-
-                            <div  style=" width: 70%; border-radius:8px;">
-                       <div class="d-flex align-items-center" style="background: #fff; height:15rem; border-radius:8px;">
+                            <div class="span2"  style=" width: 70%; border-radius:8px;">
+                       <div class="d-flex flex-span align-items-center" style="background: #fff; height:15rem; border-radius:8px;">
                             <img style="min-width: 50%; height:100%; object-fit: cover; border-radius: 8px 0 0 0;" src="img\20230707_092512.jpg">
                             <span class="p-3" style="color: #000; font-size: 1rem; text-align: center;">
-                                A avaliação inicial detecta a deterioração das caixas de concreto, evidenciando riscos à segurança e à estrutura, motivando a substituição por materiais mais duráveis como fibra de vidro ou alumínio.                            </span>
-                       </div>
-                       <div class="d-flex align-items-center" style="background: #fff; height:15rem; border-radius:4px;">
+                                Durabilidade na Construção: Materiais de construção têm prazos de vida útil essenciais para evitar altos custos ou o risco de colapso. O concreto, por ser fundamental, precisa de atenção constante para manter a segurança através de sua rápida recuperação quando necessário.
+                            </span>                       </div>
+                       <div class="d-flex flex-span flex2 align-items-center" style="background: #fff; height:15rem; border-radius:4px;">
                         <span class="p-3" style="color: #000; font-size: 1rem; text-align: center;">
-                            Selecionamos materiais de alta qualidade, como aço inox 304 e Selante PU 30, para a instalação da nova caixa e sistema de drenagem, visando durabilidade e eficiência.                       </span>
+                            Identificação e Reparo: A identificação de problemas estruturais começa com a análise de fissuras, trincas e outros sinais de desgaste. A escolha de materiais adequados e a competência da equipe são cruciais para garantir a integridade e segurança da obra.                       </span>
                         <img style="min-width: 50%; height:100%; object-fit: cover;" src="img\20230707_100223.jpg">
 
                    </div>
-                   <div class="d-flex align-items-center" style="background: #fff; height:15rem; border-radius:4px;">
+                   <div class="d-flex flex-span align-items-center" style="background: #fff; height:15rem; border-radius:4px;">
                     <img style="min-width: 50%; height: 100%; object-fit: cover; border-radius: 0 0 0 8px" src="img\20230707_094555.jpg">
 
                     <span class="p-3" style="color: #000; font-size: 1rem; text-align: center;">
-                        A substituição traz benefícios como redução de peso sobre a edificação, melhoria estética, prevenção de infiltrações e facilitação de futuras instalações.                   </span>
+                        Deterioração e Segurança: O concreto se deteriora ao longo do tempo, afetando a segurança e estética da construção. Uma ação corretiva imediata é vital para restaurar a funcionalidade da estrutura e prolongar sua utilidade, assegurando a segurança pública.                  </span>
 
                </div>   
                
@@ -287,55 +352,7 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
-<!-- start footer Area -->		
-<div class="footer-area section-gap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>Sobre nós</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
-                    </p>
-                    <p class="footer-text d-none">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>								
-                </div>
-            </div>
-            <div class="col-lg-5  col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>Newsletter</h6>
-                    <p>Tire sua dúvida</p>
-                    <div class="" id="mc_embed_signup">
-                        <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-                            <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                </div>
 
-                            <div class="info pt-20"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>						
-            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                <div class="single-footer-widget">
-                    <h6>Siga-nos</h6>
-                    <p>Não perca nenhuma novidade</p>
-                    <div class="footer-social d-flex align-items-center">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
-                    </div>
-                </div>
-            </div>							
-        </div>
-    </div>
-</div>	
 <script>
     window.addEventListener('load', function() {
 const loadingScreen = document.getElementById('loading-screen');

@@ -12,7 +12,8 @@
     <!-- Meta Keyword -->
     <meta name="keywords" content="">
     <!-- meta character set -->
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">	
+
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>ATUAR IMPERMEABILIZAÇÃO</title>
@@ -32,6 +33,10 @@
     <body>
         <style>
 
+            body
+            {
+                background: #000000;
+            }
             body::-webkit-scrollbar { display: none; }
             
             #slide-window
@@ -57,7 +62,10 @@
               transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
               
               }
-            
+              span
+              {
+                font-weight: 600;
+              }
             .slide 
               {
               list-style:none;
@@ -79,7 +87,33 @@
               }
             
             .alive { visibility:visible; }
-            
+            @media(max-width:768px)
+              {
+                .span1
+                {
+                  display: none;
+
+                }
+                .span2
+                {
+                  width: 100% !important;
+                }
+
+                  .flex2 span
+                {
+                  order: 2;
+                }
+                .flex-span
+                {
+                  flex-direction: column !important;
+                  height: auto !important;
+                }
+                .flex-span img
+                {
+                  height: 15rem !important;
+                  width: 100% !important;
+                }
+              }
             .nav 
               { 
               position:absolute; 
@@ -103,42 +137,99 @@
             
             </style>
                   
-          <header id="header" id="home">
-            
-            <div class="container">
-        
-                <div class="row align-items-center justify-content-between d-flex">
-                  <div class="logo">
-                    <a href="index.html"><img id="logo" style="max-height: 4rem;" src="img/WhatsApp_Image_2018-03-14_at_23.05.14-removebg-preview.png" alt="" title="" /></a>
+                  <div class="fluid-container div-desk"  style="background: #fff;">
+                    <div class="container p-2 d-flex justify-content-end" style="gap: 3rem;"><span class="d-flex justify-content-center" style="gap:.5rem; color: #000 !important; font-weight:600;"><span style="color:red;"><i class="bi bi-telephone-fill"></i>
+                    </span>+55 84 9626-1696</span>
+<span class="d-flex justify-content-center" style="gap:.5rem;color: #000 !important; font-weight:600;"><i style="color: red;" class="bi bi-envelope"></i>
+  atuarfachadas@renovefachada.com.br</span></div>
                   </div>
-                  <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">Atuar Fachadas</a></li>
-                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index2.html">Atuar Impermeabilização</a></li>
+            <header id="header" id="home" style="position:static; background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('img/unnamed (2).jpg') !important;">
+              
+              <div class="container">
+          
+                  <div class="row align-items-center justify-content-between d-flex">
+                    <div class="logo">
+                      <a href="index.html"><img id="logo" style="max-height: 4.5rem;" src="img/WhatsApp_Image_2018-03-14_at_23.05.14-removebg-preview.png" alt="" title="" /></a>
+                    </div>
+                    <nav id="nav-menu-container">
+                      <ul class="nav-menu d-flex align-items-center">
+                          <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="index.html">A empresa</a></li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle fw-bold pr-0" style="list-style: none !important; font-size:1rem !important;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Serviços							  </a>
+                                <style>
+                                  li
+                                  {
+                                      list-style: none;
+                                  }
+                                  #navbarDropdownMenuLink::after {
+  display: none;
+  
+}
+  .dropdown-item:active
+  {
+      background: #fff;
+  }
 
-                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="institucional.html">Institucional</a></li>
-                        <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="contato">Contato</a></li>
-                    
-                          
-                 
-                         
-                        </ul>
-                  </nav><!-- #nav-menu-container -->		    		
-                </div>
-            </div>
-          </header><!-- #header -->	
+  .dropdown-item:hover
+  {
+      color: red !important;
+  }
+                                </style>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/fibra-de-vidro.html">Instalação de caixa de fibra de vidro
+                              </a></li>
+                                <li style="list-style: none !important;"><a class="dropdown-item" style="font-size: 1rem;" href="/trabalho-altura.html">Trabalho em altura
+                              </a></li>
+                              
+                      
+
+                              </ul>
+                            </li>
+                          <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="/eng.html">Eng. Téc. Resp</a></li>
+                          <li style="list-style: none !important;"><a class="fw-bold" style="font-size:1rem !important;" href="contato.html">Contato</a></li>
+                          <li style="list-style: none !important;"><a class="fw-bold p-2" style="font-size:1rem !important; background:red; border-radius:4px;" href="https://api.whatsapp.com/send?phone=558496261696d">Solicitar uma visita técnica	</a></li>
+
+                      
+                            
+                   
+                           
+                          </ul>
+                    </nav><!-- #nav-menu-container -->		    		
+                  </div>
+              </div>
+            </header><!-- #header -->	
+            <script>
+                window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
+            </script>
+            <style>
+                li
+                {
+                    list-style: none;
+                }
+                #navbarDropdownMenuLink::after {
+display: none;
+
+}
+.dropdown-item:active
+{
+background: #fff;
+}
+
+.dropdown-item:hover
+{
+color: red !important;
+}
+              </style>
 <!-- start banner Area -->
 
-
-<div id="slide-window" class="div1">
-
-    <ol id="slides" start="1">
-    
-      <li class="slide color-0 alive" style="background-image:url('img/unnamed (1).jpg');"></li>
-      
-      <li class="slide color-1" style="background-image:url('img/Produtos-disponiveis-no-mercado-podem-ser-aplicados-em-duas-demaos-com-intervalo-de-poucas-horas-entre-cada-camada..jpg');"></li>
-    
-    </ol>
+<div class="fluid-container d-none justify-content-center" style=" background: linear-gradient(to right, rgba(0, 0, 0, 0.378), rgba(83, 1, 1, 0.358)), url('img/20210611_100725.jpg'); background-size:cover; height:20rem; width:100%; background-position: center;">
+    <span class="text-center container" style="margin-top:-5rem !important; color: #fff; font-size: 2.3rem; -webkit-text-stroke-color:rgb(17, 17, 17); -webkit-text-stroke-width:1.3px; text-transform: uppercase; line-height: 1.1; font-weight: 800;">FALE CONOSCO</span>
+    </div>
  
     <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
     <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
@@ -210,199 +301,30 @@ function DoIt(target)
   }
 
     </script>
-   <div class="contain">
 
-    <div class="wrapper">
-  
-      <div class="form">
-        <h4>INICIE JÁ</h4>
-        <h2 class="form-headline">Mande uma mensagem</h2>
-        <form id="submit-form" action="">
-          <p>
-            <input id="name" class="form-input" type="text" placeholder="Seu nome*">
-            <small class="name-error"></small>
-          </p>
-          <p>
-            <input id="email" class="form-input" type="email" placeholder="Seu email*">
-            <small class="name-error"></small>
-          </p>
-          <p class="full-width">
-            <input id="company-name" class="form-input" type="text" placeholder="Nome da empresa*" required>
-            <small></small>
-          </p>
-          <p class="full-width">
-            <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Sua mensagem*" required></textarea>
-            <small></small>
-          </p>
-          <p class="full-width d-none">
-            <input class="d-none" type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
-          </p>
-          <p class="full-width">
-            <input type="submit" class="submit-btn" value="Enviar" onclick="checkValidations()">
-          </p>
-        </form>
-      </div>
-  
-      <div class="contacts contact-wrapper">
-  
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit <span class="highlight-text-grey"></span> Cras ultricies interdum neque id ornare?</li>
-          <span class="hightlight-contact-info">
-            <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> info@demo.com</li>
-            <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+91 11 1111 2900</span></li>
-          </span>
-        </ul>
-      </div>
-    </div>
-  </div>
+
+	<!-- End review Area -->
   <style>
-
-.contain {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-}
-
-
-.contact-wrapper {
-  margin: auto 0;
-}
-
-.submit-btn {
-  float: left;
-}
-.reset-btn {
-  float: right;
-}
-
-.form-headline:after {
-  content: "";
-  display: block;
-  width: 10%;
-  padding-top: 10px;
-  border-bottom: 3px solid #ec1c24;
-}
-
-.highlight-text {
-  color: #ec1c24;
-}
-
-.hightlight-contact-info {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.5;
-}
-
-.highlight-text-grey {
-  font-weight: 500;
-}
-
-.email-info {
-    margin-top: 20px;
-}
-
-::-webkit-input-placeholder { /* Chrome */
-  font-family: 'Roboto', sans-serif;
-}
-
-.required-input {
-  color: black;
-}
-@media (min-width: 600px) {
-  .contain {
-    padding: 0;
-  }
-}
-
-h3,
-ul {
-  margin: 0;
-}
-
-h3 {
-  margin-bottom: 1rem;
-}
-
-.form-input:focus,
-textarea:focus{
-  outline: 1.5px solid #ec1c24;
-}
-
-.form-input,
-textarea {
-  width: 100%;
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
-}
-
-.wrapper > * {
-  padding: 1em;
-}
-@media (min-width: 700px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .wrapper > * {
-    padding: 2em 2em;
-  }
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contacts {
-  color: #212d31;
-}
-
-.form {
-  background: #fff;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
-form label {
-  display: block;
-}
-form p {
-  margin: 0;
-}
-
-.full-width {
-  grid-column: 1 / 3;
-}
-
-button,
-.submit-btn,
-.form-input,
-textarea {
-  padding: 1em;
-}
-
-button, .submit-btn {
-  background: transparent;
-  border: 1px solid #ec1c24;
-  color: #ec1c24;
-  border-radius: 15px;
-  padding: 5px 20px;
-  text-transform: uppercase;
-}
-button:hover, .submit-btn:hover,
-button:focus , .submit-btn:focus{
-  background: #ec1c24;
-  outline: 0;
-  color: #eee;
-}
-.error {
-  color: #ec1c24;
-}
+    #left, #right
+    {
+      display: none;
+    }
   </style>
+	<!-- Start video-sec Area -->
+
+                   
+        </section>
+        <!-- End video-sec Area -->
+           
+
+
+
+        
+        </div>
+    </div>	
+    </div>	
+    
+</section>
 <!-- End blog Area -->
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -419,58 +341,44 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 
 <!-- start footer Area -->		
-<div class="footer-area section-gap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>Sobre nós</h6>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
-                    </p>
-                    <p class="footer-text d-none">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>								
-                </div>
-            </div>
-            <div class="col-lg-5  col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>Newsletter</h6>
-                    <p>Tire sua dúvida</p>
-                    <div class="" id="mc_embed_signup">
-                        <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-                            <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                </div>
 
-                            <div class="info pt-20"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>						
-            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                <div class="single-footer-widget">
-                    <h6>Siga-nos</h6>
-                    <p>Não perca nenhuma novidade</p>
-                    <div class="footer-social d-flex align-items-center">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
-                    </div>
-                </div>
-            </div>							
-        </div>
+<div class="fluid-container d-flex justify-content-center align-items-center" style="clip-path:polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 99%, 32% 75%, 0% 75%); background: linear-gradient(to right, rgba(0, 0, 0, 0.378), rgba(83, 1, 1, 0.358)), url('img/20210611_100725.jpg'); background-size:cover; height:20rem; width:100%; background-position: center;">
+  <span class="text-center container" style="margin-top:-5rem;color: #fff; font-size: 2.3rem; -webkit-text-stroke-color:rgb(17, 17, 17); -webkit-text-stroke-width:1.3px; text-transform: uppercase; line-height: 1.1; font-weight: 800;">Peça seu orçamento personalizado!
+  </span>
+  </div>
+  <div class="fluid-container" style="background: #000;">
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <form action="https://formspree.io/yourFormspreeURL" method="POST">
+          <div class="form-group w-100">
+            <input type="text" class="w-100 form-control" name="name" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group w-100">
+            <input type="tel" class="w-100 form-control" name="phone" placeholder="Telefone" required>
+          </div>
+          <div class="form-group w-100">
+            <input type="email" class="w-100 form-control" name="_replyto" placeholder="Email" required>
+          </div>
+          <div class="form-group w-100">
+            <select class="form-control" name="inquiry">
+              <option>Revitalização de Fachada</option>
+              <!-- Outras opções aqui -->
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" placeholder="Escreva sua mensagem" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-orange btn-block" style="background: red; color: #fff;">Enviar mensagem</button>
+        </form>
+      </div>
     </div>
-</div>	
-
+  </div>
+</div>
+  
 <!-- End footer Area -->	
-<footer class="p-4" style="background: rgb(0, 0, 0);">
-    <h5 class="text-light text-center">@2023 - Todos os Direitos Reservados</h5>
+<footer class="p-4" style="background: rgb(255, 255, 255);">
+    <h5 class="text-light text-center" style="color: #000 !important;">@2023 - Todos os Direitos Reservados</h5>
 </footer>
 
 </body>
